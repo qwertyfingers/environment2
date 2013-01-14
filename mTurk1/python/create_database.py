@@ -1,6 +1,7 @@
 import sys,os
 PROJECT=(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..','..')))
-sys.path=[PROJECT]+sys.path
+PROJECT2=(os.path.join(os.path.dirname( __file__ ),'..','lib/python2.7'))
+sys.path=[PROJECT,PROJECT2]+sys.path
 import logging
 import pdb
 from mTurk1.python.database_functions import generate_experiment
