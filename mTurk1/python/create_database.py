@@ -1,6 +1,6 @@
 import sys,os
 PROJECT=(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..','..')))
-PROJECT2=(os.path.join(os.path.dirname( __file__ ),'..','lib/python2.7'))
+PROJECT2=(os.path.join(os.path.dirname( __file__ ),'..','lib/python2.7/django'))
 sys.path=[PROJECT,PROJECT2]+sys.path
 import logging
 import pdb
