@@ -1,7 +1,8 @@
-from mTurk1.python.database_functions import generate_experiment
-from django.template.defaultfilters import length
+import sys,os
+print(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..')))
 import logging
 import pdb
+from mTurk1.python.database_functions import generate_experiment
 
 
 
