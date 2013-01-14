@@ -1,0 +1,48 @@
+{% extends "uSim/web_frame.html" %}
+
+{% block static_files %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/OpenLayers.js"> </script>
+
+{% if json_sim_settings %}
+<script type="text/javascript">
+    var json_sim_settings = {{ json_sim_settings|safe }}
+    var json_agent_settings = {{ json_agent_settings|safe }}
+    var json_view_settings = {{ json_view_settings|safe }}
+    
+</script>
+{% endif %}
+<script type="text/javascript" src="{{ STATIC_URL }}uSim/js/sim_kernel_0.1.js"></script>
+
+{%block static_gui_files %}
+{% endblock %}
+
+
+{% endblock %}
+
+{% block header_urls %}
+{% endblock %}
+
+{% block page_title %}
+Simulation
+{% endblock %}
+
+
+{% block main_content %}
+
+
+
+<div id="leftColContainer">        
+    <div id="map">         
+    </div>
+</div>
+
+<div id="rightColContainer">
+{% block right_col %}
+
+{% endblock %}
+</div>
+
+
+{% endblock %}

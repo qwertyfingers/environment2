@@ -1,0 +1,29 @@
+{% extends "mTurk1/web_frame.html" %}
+
+{% block static_files %}
+{% endblock %}
+
+{% block header_urls %}
+{% endblock %}
+
+{% block page_title %}
+thank you
+{% endblock %}
+
+
+{% block main_content %}
+
+{% if url_key and reward_key %}
+<p>Task Key:</p> <p>{{url_key}}</p>
+<p>Thank you, your report has been submitted. Here is the reward code:</p>
+
+<p>{{reward_key}}</p>
+
+<p>Be careful when copying the code as any mistakes will result in your submissions not being accepted.
+    Once your code is entered on the Mechanical Turk website, your work will be checked for quality 
+    before you receive your payment</p>
+
+<p>Test reward key validation here: <a href="/mech_turk/">Reward Key Check</a></p>
+
+{% endif %}
+{% endblock %}

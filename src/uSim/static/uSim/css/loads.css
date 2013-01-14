@@ -1,0 +1,352 @@
+root {
+  display: block;
+}
+html {
+  height: 100%;
+  background-color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family:Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 100%;
+}
+
+.blueBorder {
+  border: 3px solid blue;
+}
+#simControls {
+  float: left;
+}
+.styledButton1 {
+  border: 1px solid #999999;
+  padding: 2px 6px;
+  background-color: #eeeeee;
+  color: #666666;
+  font-family: 'Lucida Grande',Tahoma,Verdana,Arial,Sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  height: 28px;
+}
+#playPauseButton {
+}
+#loadSimDiv {
+  float: left;
+}
+#GUIContainer {
+  margin-top:10px;
+  float: left;
+  width: 300px;
+  height: 600px;
+ 
+}
+.dropDownSelect {
+}
+.streetSelect {
+}
+.bigBox {
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius:8px; 
+  -moz-border-radius:8px; 
+  border-radius:8px;
+}
+fieldset {
+    
+    border:none;
+    font-size:1em;
+    padding:5px;
+}
+
+
+.colContainer{}
+
+#leftColContainer {
+  float: left;
+  height: 100%;
+  height: 100%;
+  width:600px;
+
+  overflow: hidden;
+}
+#userStartDiv {
+  border-style: none;
+  float: left;
+  display: block;
+  visibility: visible;
+  clear: none;
+  
+}
+
+#rightColContainer{
+
+padding-right:0%;   
+float:right;
+width:300px;
+
+min-width: 300px;
+    
+}
+
+#mainContainer.mc1{
+  
+    height:auto;
+
+}
+
+#footer{
+    
+height:50px;
+width:980px;
+border-top-width:2px; 
+border-top: black;
+border-top-style: solid;
+background-color: white;
+padding-bottom: 10px;
+
+margin:auto; 
+clear:both;
+
+}
+
+#GUIContainer{
+    
+
+
+}
+
+
+#GUIContainer .blockText{
+
+
+ 
+    
+}
+
+#GUIContainer h3{
+ 
+margin:1px;    
+text-align:center;     
+font-size: 1em;    
+}
+
+#header{
+height:50px;   
+}
+
+.widthWrapper{   
+ width:980px;
+ margin:auto;    
+}
+
+.clickButton1{
+    
+background: #7db9e8; /* Old browsers */
+}
+
+.startContainer{
+background: #c60230; /* Old browsers */
+width:100%;
+height:50px;    
+
+}
+
+.inputContainer{
+    
+margin-left: 3px;
+margin-right:3px;
+margin-top:10px;
+margin-bottom:5px;
+border-style:solid;
+border-width:1px;
+padding:1px;
+padding-top:5px;
+padding-bottom:5px;   
+}
+
+#GUIInputForm fieldset{
+    
+border-style:dotted;
+border-width:1px;    
+    
+}
+
+#mapLoader{
+    
+    margin:auto;
+    
+}
+
+#GUITimer{
+    
+width:100%;
+height:1.5em;
+overflow:hidden;   
+}
+
+#userGUIInfoBar{
+width:30%;    
+overflow:hidden;
+float:left;
+}
+
+#userGUIInfoBar.timer{
+width:100%;
+float:left;
+height:1em;
+}
+
+#simProgressBar{
+width:65%;
+float:right;
+height:1em;
+}
+
+#grid1{
+
+margin:0;
+padding:0;
+height:200px;
+width:294px;
+}
+
+#grid1 .box8{
+    
+height:18%;
+width:44%;
+padding:0;
+margin-left:3%;
+margin-right:3%;
+margin-top:3%;
+margin-bottom:2%;
+float:left;
+
+
+background: #e9f6fd; /* Old browsers */
+font-size:0.8em; 
+
+
+
+}
+
+#GUI2SizeSelect{
+float:left;    
+width:46%;
+padding:0;
+margin:1%;
+border-style: none;
+
+    
+    
+}
+
+#GUI2ColorSelect{
+float:left;    
+width:46%;
+padding:0;
+margin:1%;
+border-style: none;
+   
+}
+
+#GUI2AgentDescription{
+ 
+
+
+
+margin:0;
+padding:0;
+height:2em;
+width:294px;
+    
+    
+}
+
+.GUI2NotCompleteBorder{
+
+border-style:solid;
+border-color:#c60230;
+border-width: 3px;    
+}
+
+.GUI2NotCompleteBorder{
+border-style:solid;
+border-color:#c60230;
+border-width: 3px;
+background-color: white;
+}
+
+.GUI2CompleteBorder{
+border-style:solid;
+border-color:green;
+border-width: 3px;
+background-color: #d8f0d8
+}
+
+
+#GUI2TimeInput{
+
+float:left;
+width:100%;
+margin:1%;    
+}
+
+#GUI2Time{
+    
+height:2em;    
+width:294px;
+
+}
+
+#GUI2Position{
+
+text-align: center;
+height:2em;    
+width:294px;   
+}
+
+.GUI2ButtonSelected{
+
+border-color:green;     
+background-color: #d8f0d8;
+border-width:3px;
+border-style:solid;
+}
+
+.GUI2StartDisplay{
+
+    width:30%;
+    
+    text-align: center;
+    float:left; 
+    height:60%;
+    margin:1.5%;
+    margin-top:2%;
+}
+
+
+#GUI2StartRunning{
+   visibility: hidden; 
+   color:white;
+   font-size: 1.2em;
+}
+
+#GUI2StartFinished{
+   visibility: hidden;
+   color:white;
+   font-size: 1.2em;
+}
+
+
+#oldGUIContainer{
+width:600px;
+float:left;
+margin:5px;
+}
+
+#submit_to_server{
+    
+visibility: hidden;    
+}

@@ -1,0 +1,113 @@
+{% extends "uSim/simulation_frame.html" %}
+{% block static_gui_files %}
+<script type="text/javascript" src="{{ STATIC_URL }}uSim/js/sim_gui_M0.1.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}uSim/css/loads.css">
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css">
+{% endblock %}
+
+
+
+
+
+
+{% block right_col %}
+<div class="bigBox startContainer">
+              
+                <input  type="button" id="userStartButton" class="GUI2StartDisplay" value="START"></input>
+                <div class="GUI2StartDisplay" id="GUI2StartRunning"> Running </div>
+                <div class="GUI2StartDisplay" id="GUI2StartFinished"> Finished</div>
+</div>
+<div id="GUITimer">
+<span>Progress</span><div id="simProgressBar"></div>
+</div>
+<div id="GUIContainer">
+            <form id="GUIInputForm" action="" method="">
+            <input id="GUI2StartReportTime" type="hidden" name="start_report_time" value=""  />
+            <input id="GUI2StartReportFrame" type="hidden" name="start_report_frame" value=""  />
+            <input id="GUI2EndReportTime" type="hidden" name="end_report_time" value=""  />
+            <input id="GUI2EndReportFrame" type="hidden" name="end_report_frame" value=""  />
+             <h3>Where did it happen? </h3>
+            <div id="GUI2Position" class="GUI2NotCompleteBorder">
+            <input id="GUI2ClickStateX" type="hidden" name="target_click_x" value=""  />
+            <input id="GUI2ClickStateY" type="hidden" name="target_click_y" value=""  />
+            <input id="GUI2ClickStateTime" type="hidden" name="target_click_time" value=""  />
+            <input id="GUI2ClickStateFrame" type="hidden" name="target_click_frame" value=""  />
+            <span>Click on map</span>
+            </div>   
+
+            <h3>What did it look like? </h3> 
+            <div id="GUI2AgentDescription" class="GUI2NotCompleteBorder">
+                <div id="GUI2SizeSelect">
+                         
+                Size:<select name="target_size" id="sizeSelect" size="1" >
+                            <option value="none" selected="selected">--</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                <input id="GUI2SizeSelectTime" type="hidden" name="target_size_time" value=""  />
+                <input id="GUI2SizeSelectFrame" type="hidden" name="target_size_frame" value=""  />
+                    
+            </div>
+                <div id="GUI2ColorSelect" >
+                Colour:<select name="target_colour" id="colorSelect" size="1" >
+                            <option style="background-color: white; color: black" value="NONE" selected="selected">--</option>
+                            <option style="background-color: black; color: white" value="BLACK">Black </option>
+                            <option style="background-color: navy; color: white" value="NAVY">Navy</option>
+                            <option style="background-color: green; color: white" value="GREEN">Green</option>
+                            <option style="background-color: teal; color: white" value="TEAL">Teal</option>
+                            <option style="background-color: maroon; color: white" value="MAROON">Maroon</option>
+                            <option style="background-color: purple; color: white" value="PURPLE">Purple</option>
+                            <option style="background-color: olive; color: white" value="OLIVE">Olive</option>
+                            <option style="background-color: silver; color: black" value="SILVER">Silver</option>
+                            <option style="background-color: gray; color: white" value="GRAY">Gray</option>
+                            <option style="background-color: blue; color: white" value="BLUE">Blue</option>
+                            <option style="background-color: lime; color: black" value="LIME">Lime</option>
+                            <option style="background-color: aqua; color: black" value="AQUA">Aqua</option>
+                            <option style="background-color: red; color: black" value="RED">Red</option>
+                            <option style="background-color: fuchsia; color: black" value="FUCHSIA">Fuchsia</option>
+                            <option style="background-color: yellow; color: black" value="YELLOW">Yellow</option>
+                            <option style="background-color: white; color: black" value="WHITE">White</option>
+                        </select>
+                    <input id="GUI2ColorSelectTime" type="hidden" name="target_color_time" value=""  />
+                    <input id="GUI2ColorSelectFrame" type="hidden" name="target_color_frame" value=""  />
+                </div>
+            </div>
+            
+            
+            <h3>What did it do? </h3>   
+            <div id="grid1" class="GUI2NotCompleteBorder">
+                <input class="box8 GUI2ActionButton" type="button" value="Appeared"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Disappeared"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Accelerated"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Decelerated"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Stopped"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Started"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Turned_Left"></input>
+                <input class="box8 GUI2ActionButton" type="button" value="Turned_Right"></input>
+            </div>    
+            
+            <input id="GUI2ActionState" type="hidden" name="target_action" value=""  />
+            <input id="GUI2ActionSelectTime" type="hidden" name="target_action_time" value=""  />
+            <input id="GUI2ActionSelectFrame" type="hidden" name="target_action_frame" value=""  />
+            
+            
+            <div id="GUI2ImportantFormButtons">
+            
+            <input type="button" value="Submit the report" id="submitReportButton"/>  
+            <input type="button" value="Reset" id="resetReportButton">    
+            
+            </div>
+            
+            </form>
+            
+            
+            <form id="form_send_reports" method="post">
+            {% csrf_token %}  
+            <input type="submit" value="Finish (send the reports)" id="submit_to_server"/>   
+            </form>
+        </div>
+{% endblock %}
+
+
+ 

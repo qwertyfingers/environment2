@@ -1,0 +1,34 @@
+{% extends "mTurk1/web_frame.html" %}
+
+{% block static_files %}
+{% endblock %}
+
+{% block header_urls %}
+{% endblock %}
+
+{% block page_title %}
+Display Keys
+{% endblock %}
+
+
+{% block main_content %}
+{% if active_keys %}
+<div>
+<h2>ACTIVE KEYS:</h2>
+{% for key in active_keys  %}
+<p><a href="{% url mturk1:simulation key %}">{{key}}</a></p>
+{% endfor %}
+
+{% endif %}
+
+{% if inactive_keys %}
+
+<h2>INACTIVE KEYS:</h2>
+{% for key in inactive_keys  %}
+
+<p><a href="{% url mturk1:simulation key  %} ">{{key}}</a></p>
+
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

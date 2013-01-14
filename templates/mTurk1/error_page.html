@@ -1,0 +1,19 @@
+{% extends "mTurk1/web_frame.html" %}
+
+
+{% block static_files %}
+{% endblock %}
+
+{% block header_urls %}
+{% endblock %}
+
+{% block page_title %}
+Sorry...
+{% endblock %}
+
+
+{% block main_content %}
+{% if error_message %}
+{{error_message}}
+{% endif %}
+{% endblock %}

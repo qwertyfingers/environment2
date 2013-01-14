@@ -1,0 +1,23 @@
+
+root {
+  display: block;
+}
+html {
+  height: 100%;
+  background-color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+#test_1{   
+    width:50%;
+    color:red;
+    background-color: blue;
+    height:100%;
+}
+
