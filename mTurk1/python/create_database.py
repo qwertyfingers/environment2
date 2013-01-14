@@ -1,5 +1,6 @@
 import sys,os
-print(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..')))
+PROJECT=(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..','..')))
+sys.path=[PROJECT]+sys.path
 import logging
 import pdb
 from mTurk1.python.database_functions import generate_experiment
