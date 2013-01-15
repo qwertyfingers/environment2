@@ -274,18 +274,23 @@ class GUI_report_1(models.Model):
     target_click_y = models.DecimalField(max_digits=20, decimal_places=10)#
     
     
-    target_color_time=models.IntegerField(blank=True, null=True)#
-    target_color_frame=models.IntegerField(blank=True, null=True)#
-    target_click_time=models.IntegerField(blank=True, null=True)#
-    target_click_frame=models.IntegerField(blank=True, null=True)#
-    target_action_time=models.IntegerField(blank=True, null=True)#
-    target_action_frame=models.IntegerField(blank=True, null=True)#
-    target_size_time=models.IntegerField(blank=True, null=True)#
-    target_size_frame=models.IntegerField(blank=True, null=True)#
-    start_report_time=models.IntegerField(blank=True, null=True)#
-    start_report_frame=models.IntegerField(blank=True, null=True)#
-    end_report_time=models.IntegerField(blank=True, null=True)#
-    end_report_frame=models.IntegerField(blank=True, null=True)#
+    target_color_time=models.BigIntegerField(blank=True, null=True)#
+    target_color_frame=models.BigIntegerField(blank=True, null=True)#
+    
+    target_click_time=models.BigIntegerField(blank=True, null=True)#
+    target_click_frame=models.BigIntegerField(blank=True, null=True)#
+    
+    target_action_time=models.BigIntegerField(blank=True, null=True)#
+    target_action_frame=models.BigIntegerField(blank=True, null=True)#
+    
+    target_size_time=models.BigIntegerField(blank=True, null=True)#
+    target_size_frame=models.BigIntegerField(blank=True, null=True)#
+    
+    start_report_time=models.BigIntegerField(blank=True, null=True)#
+    start_report_frame=models.BigIntegerField(blank=True, null=True)#
+    
+    end_report_time=models.BigIntegerField(blank=True, null=True)#
+    end_report_frame=models.BigIntegerField(blank=True, null=True)#
     
     
     created = models.DateTimeField(auto_now_add=True)#
