@@ -274,22 +274,22 @@ class GUI_report_1(models.Model):
     target_click_y = models.DecimalField(max_digits=20, decimal_places=10)#
     
     
-    target_color_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    target_color_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     target_color_frame=models.IntegerField(blank=True, null=True)#
     
-    target_click_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    target_click_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     target_click_frame=models.IntegerField(blank=True, null=True)#
     
-    target_action_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    target_action_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     target_action_frame=models.IntegerField(blank=True, null=True)#
     
-    target_size_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    target_size_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     target_size_frame=models.IntegerField(blank=True, null=True)#
     
-    start_report_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    start_report_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     start_report_frame=models.IntegerField(blank=True, null=True)#
     
-    end_report_time=models.DecimalField(max_digits=20, decimal_places=10,blank=True, null=True)#
+    end_report_time=models.DecimalField(max_digits=20, decimal_places=0,blank=True, null=True)#
     end_report_frame=models.IntegerField(blank=True, null=True)#
     
     
