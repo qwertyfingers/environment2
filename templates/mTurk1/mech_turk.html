@@ -1,0 +1,31 @@
+{% extends "mTurk1/web_frame.html" %}
+
+{% block static_files %}
+{% endblock %}
+
+{% block header_urls %}
+{% endblock %}
+
+{% block page_title %}
+{% endblock %}
+
+
+{% block main_content %}
+
+<form action="" method="post">
+{% csrf_token %} 
+Task Key:  <input type="text" maxlength="30" name="task_key" value="">   
+Reward Key:<input type="text" maxlength="30" name="reward_key" value="">    
+    
+    
+<input type="submit" value="Use Reward Key">  
+</form>
+
+{% if response %}
+<p>{{response}}</p>
+
+{% endif %}
+
+<p><a href="/">Back to tasks</a></p>
+
+{% endblock %}

@@ -133,5 +133,45 @@ def thankyou_post(request,key=None,reward_key=None):
     return render(request, 'mTurk1/thankyou_page.html',{"url_key":key, "reward_key": reward_key}) 
     
     
+def mech_turk(request):
+    if request.method == 'POST':
+        try:
+            #is task key valid
+            try:
+                task_key = request.POST.get('task_key')
+                current_pkg=Pass_key_group.objects.get(user_key=task_key)
+            except:
+                response="Your task key is not valid"
+                raise
+            #is reward key valid
+            if current_pkg.active_key==False:
+                logger.debug("Key is not active")
+                logger.exception("Key is not active")
+                raise
+                
+            
+        if current_pkg.active_key==False:
+            if current_pkg.active_key==False:
+        logger.debug("Key is not active")
+        logger.exception("Key is not active")
+        raise Http404
+        raise Http404    
+            db_test_active=Key_sim_pair.objects.get(key=task_key).active
+            if (db_test_active):
+                real_reward_key=Key_sim_pair.objects.get(key=task_key).reward_key
+                user_reward_key=request.POST.get('reward_key')
+                if(real_reward_key==user_reward_key):
+                    response="Your reward key is valid and successfully processed"
+                    db_entry = Key_sim_pair.objects.get(key=task_key)
+                    db_entry.active = False
+                    db_entry.save()
+                else:
+                    response="Your reward key is not valid"
+            else:
+                response="Your key is not active"
+        else:
+            response="Your task key is not valid"
+        return render(request, 'mTurk1/mech_turk.html',{'response':response})
 
-  
+    
+    return render(request,'mTurk1/mech_turk.html',{})
