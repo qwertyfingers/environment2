@@ -86,6 +86,8 @@ def simulation(request, key):
     
     #If there is POST data present, check to see if it is a valid report POST
     if request.method=='POST':
+        logger.info("Request.method=POST found")
+        logger.info("BEGIN process_reports_from_post")
         process_reports=process_reports_from_post(request.POST,current_pkg,key)
         logger.info(process_reports[0])
         #If process reports returned successfully

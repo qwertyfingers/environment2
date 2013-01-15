@@ -6,10 +6,6 @@ import logging
 import pdb
 from mTurk1.python.database_functions import generate_experiment
 
-
-
-
-
 def create_experiment_database():
     from mTurk1.simulations.sim_test_1.configExp import ExperimentSettings
     #TRY: get settings from ExperimentSettings module
