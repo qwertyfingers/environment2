@@ -41,7 +41,11 @@ def create_experiment_database():
         logger.critical("create_database: Could not run valid_lists")
         return 1
         
-    try:    
+    try:
+        logger.info("Running generate_experiment")
+        logger.debug("Sim_list: %s" %sim_list)
+        logger.debug("Agent_list: %s" %agent_list)
+        logger.debug("View_list: %s" %view_list)
         status=generate_experiment(sim_list,agent_list,view_list,sim_name,exp_name)
         if status==1:
             raise Exception
